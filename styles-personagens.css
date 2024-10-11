@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body, html {
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+#banner-home {
+    background-image: url('./images/images-home/banner-teste.jpg'); /* Caminho da sua imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o contêiner */
+    background-position: center; /* Centraliza a imagem */
+    height: 50vh; /* Define a altura como 100% da altura da tela */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+#banner-home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Adiciona uma sobreposição escura */
+}
+
+#banner-home h1 {
+    position: relative;
+    font-size: 3em;
+    z-index: 1; /* Garante que o título fique acima da sobreposição */
+    color: #C1D2D0;
+}
+
+h1 {
+    margin: 0;
+}
+
+#personagens-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.personagem-card {
+    background-color: #C1D2D0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    width: 200px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.personagem-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #81b853;
+}
+
+.personagem-card p {
+    font-size: 0.9em;
+    color: white;
+}
